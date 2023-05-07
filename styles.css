@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    background-image: url(./Lucy\ Y\ David.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* contenedor principal*/
+.login_form_container{
+    position: relative;
+    width: 410px;
+    height: 470px;
+    max-width: 400px;
+    max-width: 470px;
+    background-color: #040717;
+    border-radius: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Neon Rosado y su configuracion*/
+.login_form_container::before{
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent,transparent,transparent,#ee00ff);
+    animation: rotate_border 6s linear infinite;
+}
+
+/* Neon Verde y su configuracion*/
+.login_form_container::after{
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent,transparent,transparent,#53f963);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+
+/* Bloque de comando que permite la rotación*/
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* formulario */
+.login_form{
+    position: absolute;
+    content: '';
+    background: #0c1022;
+    border-radius: 50px 0px;
+    inset: 5px;
+    padding: 50px 40px;
+    z-index: 10;
+    color: #E3E8EB;
+
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Estilos de ambos inputs */
+.input_group{
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space;
+}
+
+/* Fa son los iconos que van alado de los inputs*/
+.fa{
+    font-size: 20px !important;
+}
+
+/* texto que va en los inputs*/
+.input_text{
+    width: 95%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #CCD6D8;
+    font-size: 18px;
+    padding-left: 10px;
+    color: #E3E8EB;
+}
+
+::placeholder{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Este es el boton Submit*/
+#login_button{
+    position: relative;
+    width: 320px;
+    height: 40px;
+    transform: 1s;
+    margin-top: 70px;
+}
+
+#login_button a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: 2px solid #e8e8e8ab;
+    border-radius: 50px;
+    background-color: #0c1022;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.glowIcon{
+    text-shadow: 0 0 10px #ffffff;
+}
+
+a:hover{
+    text-shadow: 0 0 10px #ffffff;
+}
+
+
+/* Los button group son los efectos que se activan cuando paso el cursos por el Submit*/
+.button_group::before{
+    position: absolute;
+    content: "";
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50px;
+    z-index: 1;
+    transition: 1s;
+    background: linear-gradient(315deg, #53f963, #0e1538,#0e1538,#d400d4);
+}
+
+.button_group a{
+border: none !important;
+}
+
+.button_group::after{
+    position: absolute;
+    content: "";
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50px;
+    z-index: 2;
+    transition: 1s;
+    background: linear-gradient(315deg, #53f963, #0e1538,#0e1538,#ee00ff);
+    filter: blur(20px);
+}
